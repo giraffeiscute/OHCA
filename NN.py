@@ -161,7 +161,7 @@ test_data = torch.FloatTensor(test_spatial_data[:, :-1])     # 用其中5筆數�
 
 
 # 建立 SHAP 解釋器，使用背景數據
-explainer = shap.DeepExplainer(s_net, background_data)
+explainer = shap.GradientExplainer(s_net, background_data)
 shap_values = explainer.shap_values(test_data)
 # Get the shap values from my test data
 

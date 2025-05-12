@@ -29,11 +29,45 @@ notebooks/：模型訓練、SHAP 分析與可視化
 
 optimization/：AED 部署優化的整數規劃模型實作
 
-data/：資料來源與處理說明（包括 OpenStreetMap 與 OHCA 資料）
-
-results/：部署效果圖與模型評估結果
-
 ## 引用方式
 如果你在研究中使用本專案，請引用以下論文：
+
+Yang, C.-Y., Leong, K.-H., Cao, K., Yang, M., & Chan, W. K. (2025). Public Access Defibrillator Deployment for Cardiac Arrests: A Learn-Then-Optimize Approach with SHAP-based Interpretable Analytics. arXiv preprint arXiv:2401.00682.
+
+
+
+
+# Public Access Defibrillator Deployment for Cardiac Arrests: A Learn-Then-Optimize Approach with SHAP-based Interpretable Analytics
+This repository contains the implementation of our paper "Public Access Defibrillator Deployment for Cardiac Arrests: A Learn-Then-Optimize Approach with SHAP-based Interpretable Analytics." We propose an innovative Learn-Then-Optimize framework that integrates geographic-data-based machine learning models, SHAP-based interpretability, and integer programming to address the prediction of out-of-hospital cardiac arrest (OHCA) risks and the optimal deployment of Automated External Defibrillators (AEDs).
+
+## Project Highlights
+### Multi-model Machine Learning and Cross-Region Generalization
+We adopt multiple machine learning approaches—XGBoost, Multilayer Perceptron (MLP), and Support Vector Machine (SVM)—to model and predict OHCA risks, enhancing both the stability and accuracy of predictions.
+
+### Predicting OHCA Hotspots Without Demographic Data
+Our models rely solely on Point-of-Interest (POI) and building distribution data from OpenStreetMap as inputs. The neural network model achieves an R² over 0.75 on the test set, demonstrating that geographic features alone are highly informative for OHCA risk prediction.
+
+### SHAP-Based Interpretability
+We employ SHAP to quantify the contribution of different building and POI types (e.g., apartments, clinics) to OHCA risk. This enhances model transparency and provides explainable insights for public health decision-making.
+
+### Integer Programming for AED Deployment Optimization
+We transform SHAP-derived risk into spatial density scores and embed them in an integer programming model that accounts for real-world deployment constraints such as AED spacing and coverage radius.
+
+## Key Experimental Findings
+1. In small-scale deployment settings, our method outperforms random placement by up to 49% in OHCA coverage.
+
+2. In large-scale deployments (N = 100), the average patient survival rate improves by over 16%.
+
+3. Sensitivity analysis identifies the optimal AED spacing to be 1.2 km, aligning with the four-minute response window.
+
+4. SHAP analysis confirms a strong correlation between residential density (e.g., apartments) and OHCA incidence.
+
+## Project Structure
+notebooks/: Model training, SHAP analysis, and visualization
+
+optimization/: Integer programming implementation for AED deployment optimization
+
+## Citation
+If you use this repository in your research, please cite:
 
 Yang, C.-Y., Leong, K.-H., Cao, K., Yang, M., & Chan, W. K. (2025). Public Access Defibrillator Deployment for Cardiac Arrests: A Learn-Then-Optimize Approach with SHAP-based Interpretable Analytics. arXiv preprint arXiv:2401.00682.

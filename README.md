@@ -1,53 +1,39 @@
-🧠 Public Access Defibrillator Deployment for Cardiac Arrests
-🧠 公共自動體外心臟去顫器部署研究
-This repository contains the implementation of our paper "Public Access Defibrillator Deployment for Cardiac Arrests: A Learn-Then-Optimize Approach with SHAP-based Interpretable Analytics."
-本倉庫對應我們的論文《公共自動體外心臟去顫器部署研究：結合 SHAP 可解釋分析的學習再優化方法》的完整實作。
+English version underneath
+# 公共自動體外心臟去顫器部署研究：結合 SHAP 可解釋分析的學習再優化方法
+本專案為論文《Public Access Defibrillator Deployment for Cardiac Arrests: A Learn-Then-Optimize Approach with SHAP-based Interpretable Analytics》的實作代碼。我們提出一個創新的「先學習、後優化（Learn-Then-Optimize）」框架，結合地理資料機器學習模型、SHAP 可解釋性分析，以及整數規劃，解決院外心臟驟停（OHCA）風險預測與 AED（自動體外心臟去顫器）最適部署問題。
 
-We propose a novel learn-then-optimize framework combining machine learning, SHAP-based interpretation, and integer programming to identify high-risk areas of out-of-hospital cardiac arrest (OHCA) and optimize AED (automated external defibrillator) placement accordingly.
-我們提出一個創新的「先學習再優化」框架，結合機器學習、SHAP 可解釋模型分析以及整數規劃，來識別院外心臟驟停（OHCA）的高風險區域，並據此優化 AED（自動體外心臟去顫器）的部署策略。
+## 專案特色
+### 多模型機器學習與跨區域泛化能力強化
+本研究同時運用了多種機器學習方法，包括 XGBoost、Multilayer Perceptron（MLP）與支援向量機（SVM） 等，對 OHCA 風險進行建模與預測，以提升模型的穩定性與準確性。
 
-🔍 Key Features
-🔍 主要特點
-ML-powered OHCA prediction using geographic data only: The model achieves over 0.75 R² on the test set using just POI and building features from OpenStreetMap.
+### 無需人口統計資料，即可預測 OHCA 高風險區域\
+模型僅使用 OpenStreetMap 的 POI 與建築分布資料作為輸入，測試集 R² 可達 0.75，證明地理資訊對於 OHCA 風險具有高度預測力。
 
-僅使用地理資料的 OHCA 預測模型：模型僅利用來自 OpenStreetMap 的 POI 與建築資訊，即可在測試集上達到超過 0.75 的 R²。
+### SHAP 可解釋性分析
+利用 SHAP 模型量化各類建築（如住宅、公寓、診所等）對 OHCA 預測風險的貢獻，提供透明可解釋的依據協助公共衛生決策。
 
-SHAP-based interpretability: SHAP values quantify how each type of location (e.g., apartments, clinics) contributes to OHCA risk, enabling transparent decision-making.
+### 整數規劃 AED 部署優化模型
+將 SHAP 權重轉化為空間風險密度，納入模型目標函數，考慮實際部署條件（如 AED 間距與覆蓋範圍），產出部署策略。
 
-基於 SHAP 的模型可解釋性：SHAP 值可量化不同類型地點（如住宅、公寓、診所）對 OHCA 風險的貢獻，提升決策透明度。
+## 實驗成果亮點
+1. 小規模部署下，相較隨機佈局，OHCA 覆蓋率提升最高達 49%
 
-Integer programming optimization: A SHAP-weighted objective function helps determine the most effective AED deployment under real-world constraints like coverage radius and spacing.
+2. 大規模部署下（N = 100），平均病患存活率提升超過 16%
 
-整數規劃優化：透過 SHAP 加權目標函數，我們在如 AED 覆蓋範圍與最小間距等現實條件下，計算最有效的部署方案。
+3. 敏感度分析顯示最佳 AED 間距為 1.2 公里，與實際黃金四分鐘反應時間相符
 
-🧪 Experimental Highlights
-🧪 實驗亮點
-+49% OHCA coverage improvement over random deployment with small-scale setups.
+4. SHAP 分析揭示高住宅密度（如 apartment）與 OHCA 高發生率具有高度關聯
 
-小規模部署下，相較隨機佈局，OHCA 覆蓋率提升達 49%。
+## 專案目錄說明
+notebooks/：模型訓練、SHAP 分析與可視化
 
-+16% improvement in average survival rate at full deployment scale (N=100).
+optimization/：AED 部署優化的整數規劃模型實作
 
-在部署 100 台 AED 的情境下，平均存活率提升超過 16%。
+data/：資料來源與處理說明（包括 OpenStreetMap 與 OHCA 資料）
 
-Sensitivity analysis provides deployment guidelines for spacing and quantity.
+results/：部署效果圖與模型評估結果
 
-敏感度分析提供 AED 間距與數量的佈局指引。
+## 引用方式
+如果你在研究中使用本專案，請引用以下論文：
 
-📁 Repository Structure
-📁 倉庫結構
-notebooks/: Model training, SHAP analysis, and visualizations
-
-notebooks/：模型訓練、SHAP 解釋與可視化
-
-optimization/: SHAP-guided integer programming for AED placement
-
-optimization/：導入 SHAP 權重的 AED 整數規劃優化
-
-data/: Instructions for accessing or generating geographic and OHCA data
-
-data/：地理與 OHCA 數據取得或合成的說明
-
-results/: Experimental results and deployment maps
-
-results/：實驗結果與部署地圖
+Yang, C.-Y., Leong, K.-H., Cao, K., Yang, M., & Chan, W. K. (2025). Public Access Defibrillator Deployment for Cardiac Arrests: A Learn-Then-Optimize Approach with SHAP-based Interpretable Analytics. arXiv preprint arXiv:2401.00682.

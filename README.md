@@ -36,7 +36,7 @@ optimization/：AED 部署優化的整數規劃模型實作
 Yang, C.-Y., Leong, K.-H., Cao, K., Yang, M., & Chan, W. K. (2025). Public Access Defibrillator Deployment for Cardiac Arrests: A Learn-Then-Optimize Approach with SHAP-based Interpretable Analytics. arXiv preprint arXiv:2401.00682.
 
 
-
+****
 
 # Public Access Defibrillator Deployment for Cardiac Arrests: A Learn-Then-Optimize Approach with SHAP-based Interpretable Analytics
 This repository contains the implementation of our paper "Public Access Defibrillator Deployment for Cardiac Arrests: A Learn-Then-Optimize Approach with SHAP-based Interpretable Analytics." We propose an innovative Learn-Then-Optimize framework that integrates geographic-data-based machine learning models, SHAP-based interpretability, and integer programming to address the prediction of out-of-hospital cardiac arrest (OHCA) risks and the optimal deployment of Automated External Defibrillators (AEDs).

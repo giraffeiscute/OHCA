@@ -1,6 +1,8 @@
 English version underneath
 # 公共自動體外心臟去顫器部署研究：結合 SHAP 可解釋分析的學習再優化方法
 本專案為論文《Public Access Defibrillator Deployment for Cardiac Arrests: A Learn-Then-Optimize Approach with SHAP-based Interpretable Analytics》的實作代碼。我們提出一個創新的「先學習、後優化（Learn-Then-Optimize）」框架，結合地理資料機器學習模型、SHAP 可解釋性分析，以及整數規劃，解決院外心臟驟停（OHCA）風險預測與 AED（自動體外心臟去顫器）最適部署問題。
+
+
 ![image](https://github.com/giraffeiscute/python-ML-project-AED-deployment-optimization/blob/main/Flow%20chart.png)
 
 ## 專案特色

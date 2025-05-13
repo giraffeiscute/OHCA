@@ -44,6 +44,8 @@ Yang, C.-Y., Leong, K.-H., Cao, K., Yang, M., & Chan, W. K. (2025). Public Acces
 
 # Public Access Defibrillator Deployment for Cardiac Arrests: A Learn-Then-Optimize Approach with SHAP-based Interpretable Analytics
 This repository contains the implementation of our paper "Public Access Defibrillator Deployment for Cardiac Arrests: A Learn-Then-Optimize Approach with SHAP-based Interpretable Analytics." We propose an innovative Learn-Then-Optimize framework that integrates geographic-data-based machine learning models, SHAP-based interpretability, and integer programming to address the prediction of out-of-hospital cardiac arrest (OHCA) risks and the optimal deployment of Automated External Defibrillators (AEDs).
+
+
 ![image](https://github.com/giraffeiscute/python-ML-project-AED-deployment-optimization/blob/main/Flow%20chart.png)
 ## Project Highlights
 ### Multi-model Machine Learning and Cross-Region Generalization

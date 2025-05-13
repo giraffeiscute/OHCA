@@ -35,6 +35,8 @@ optimization/：AED 部署優化的整數規劃模型實作
 
 Yang, C.-Y., Leong, K.-H., Cao, K., Yang, M., & Chan, W. K. (2025). Public Access Defibrillator Deployment for Cardiac Arrests: A Learn-Then-Optimize Approach with SHAP-based Interpretable Analytics. arXiv preprint arXiv:2401.00682.
 
+[完整文章arXiv連結](https://arxiv.org/abs/2501.00819)
+
 
 ****
 
@@ -72,3 +74,5 @@ optimization/: Integer programming implementation for AED deployment optimizatio
 If you use this repository in your research, please cite:
 
 Yang, C.-Y., Leong, K.-H., Cao, K., Yang, M., & Chan, W. K. (2025). Public Access Defibrillator Deployment for Cardiac Arrests: A Learn-Then-Optimize Approach with SHAP-based Interpretable Analytics. arXiv preprint arXiv:2401.00682.
+
+[Paper link in arXiv](https://arxiv.org/abs/2501.00819)
